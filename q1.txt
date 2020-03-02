@@ -1,0 +1,48 @@
+create EMP table
+
+EmpID,
+FirstName,
+LastName,
+Occupation,
+YearlyIncome,
+Sales,
+HireDate,
+insert 5 records
+apply where(>,== and so on ) condition
+
+create EMP information table following fields
+
+EmpID,
+FirstName,
+LastName,
+Designation,
+salary 
+interview date
+reporting date
+releaving date
+email
+mobile
+address
+insert 5 records
+apply where(>,== and so on ) condition
+-----------------------
+CREATE TABLE pet (name , owner,      species ,gender , birth, death);
+
+-------------------------
+CREATE TABLE people (id,   first_name, last_name,  birth_date);
+-------------------------
+create order1 table following fields
+orderid
+productname
+orderdate
+apply where condition
+----------------
+
+
+
+
+
+
+
+
+
