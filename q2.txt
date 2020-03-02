@@ -1,0 +1,59 @@
+First we will create table invoice_user to store user login details to allow logged in user to manage invoices.
+
+
+ 
+CREATE TABLE invoice_user(
+id int(11) NOT NULL,
+email varchar(100) NOT NULL,
+password varchar(100) NOT NULL,
+first_name varchar(100) NOT NULL,
+last_name varchar(100) NOT NULL,
+mobile bigint(20) NOT NULL,
+address text NOT NULL
+);
+
+
+CREATE TABLE invoice_order (
+order_id int(11) NOT NULL,
+user_id int(11) NOT NULL,
+order_date timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+order_receiver_name varchar(250) NOT NULL,
+order_receiver_address text NOT NULL,
+order_total_before_tax decimal(10,2) NOT NULL,
+order_total_tax decimal(10,2) NOT NULL,
+order_tax_per varchar(250) NOT NULL,
+order_total_after_tax double(10,2) NOT NULL,
+order_amount_paid decimal(10,2) NOT NULL,
+order_total_amount_due decimal(10,2) NOT NULL,
+note text NOT NULL
+);
+--------------------------------------------
+ create table invoice_order_item to store invoice items details.
+
+CREATE TABLE invoice_order_item (
+order_item_id int(11) NOT NULL,
+order_id int(11) NOT NULL,
+item_code varchar(250) NOT NULL,
+item_name varchar(250) NOT NULL,
+order_item_quantity decimal(10,2) NOT NULL,
+order_item_price decimal(10,2) NOT NULL,
+order_item_final_amount decimal(10,2) NOT NULL
+);
+--------------------------
+CREATE TABLE shop (
+    article INT UNSIGNED  DEFAULT '0000' NOT NULL,
+    dealer  CHAR(20)      DEFAULT ''     NOT NULL,
+    price   DECIMAL(16,2) DEFAULT '0.00' NOT NULL,
+    PRIMARY KEY(article, dealer));
+------------------------------------------------
+create user details
+
+user id
+username
+password
+account_creation date time
+emailid
+mobile
+address
+
+
